@@ -23,7 +23,7 @@ a {
         height: 100%;
         position: absolute;
         overflow: hidden;
-        animation: marquee 5s linear infinite;
+        animation: marquee 20s linear infinite;
     }
 
     .marquee span {
