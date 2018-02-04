@@ -1,45 +1,77 @@
-﻿body {
-    padding: 50px;
+﻿.border {
+    height: 1010px;
+    width: 1680px;
+    border-top: 20px solid;
+    border-bottom: 20px solid;
+    margin: 0;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    font-family: monospace;
+    -webkit-animation: blink 3s ease-in-out infinite alternate;
+}
+
+
+
+body {
+    position: fixed;
+    padding: 0;
+    margin: 0px;
+    top: 0;
+    left: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    margin: 20px;
-    width: 100%;
+    width: 1000%;
     height: 100%;
+    background-color: white;
+
 }
 
 a {
     color: #00B7FF;
 }
 
-.marquee {
-    height: 1080px;
-    width: 200%;
-    overflow: hidden;
-    position: relative;
+/* Blinking animation code from http://jsfiddle.net/onigetoc/aLk7v/*/
+@-webkit-keyframes blink {
+    50% {
+        border-color: #ff0000;
+    }
 }
 
-    .marquee div {
-        display: block;
-        width: 200%;
-        height: 100%;
+
+.scroll-left {
+    height: 1050px;
+    overflow: visible;
+    position: absolute;
+    left:0px;
+    right:0px;
+}
+
+    .scroll-left p {
         position: absolute;
-        overflow: hidden;
-        animation: marquee 20s linear infinite;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: black;
+        line-height: 50px;
+        text-align: center;
+        vertical-align: text-top;
+        transform: translateX(25%);
+        padding: 0px;
+        animation: scroll-left 30s linear infinite;
+        font: bold 1100px Arial, Helvetica, sans-serif;
     }
 
-    .marquee span {
-        float: left;
-        width: 100%;
-        font: 1080px "Lucida Grande", Helvetica, Arial, sans-serif;
-    }
-
-@keyframes marquee {
+@keyframes scroll-left {
     0% {
-        left: 0;
+        transform: translateX(25%);
     }
 
     100% {
-        left: -100%;
+        transform: translateX(-90%);
     }
+
 }
 
-/*marquee code from: https://codepen.io/jamesbarnett/pen/kfmKa*/
+/*Scrolling animation code from: https://codepen.io/Murtaxa/pen/egrRbN
